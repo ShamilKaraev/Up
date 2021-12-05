@@ -1,0 +1,35 @@
+﻿<Page x:Class="pavilions.Captcha"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:pavilions"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Captcha">
+
+    <Grid>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="64" Margin="236,164,0,0" VerticalAlignment="Top" Width="211">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FFB7FF71" Offset="0"/>
+                    <GradientStop Color="#FF253A18" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <TextBlock Text="Кажется вы проявляете подозрительную активность. Пожалуйста пройдите капчу" HorizontalAlignment="Left" Margin="113,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="596" FontSize="14"/>
+        <TextBox x:Name="Captcha_Textbox" HorizontalAlignment="Left" Height="25" Margin="236,246,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Background="#FFE1E8D4" FontSize="14"/>
+        <TextBlock  x:Name="Captcha_Textblock" Text="WWWWWW" HorizontalAlignment="Left" Margin="240,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="226" FontFamily="Kristen ITC" FontSize="36" RenderTransformOrigin="0.5,0.5" Foreground="White">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-1.412"/>
+                    <RotateTransform Angle="-1.987"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button Content="Проверить" HorizontalAlignment="Left" Margin="363,246,0,0" VerticalAlignment="Top" Width="81" Height="25" Click="Button_Click" FontSize="14"/>
+
+    </Grid>
+</Page>
